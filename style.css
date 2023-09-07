@@ -39,5 +39,12 @@ img {
 }
 
 [data-testid="myTack"] {
-
+font-size: 20px;
+font-family:Arial, Helvetica, sans-serif;
 }
+
+a {
+    color: blue;
+    
+}
+
