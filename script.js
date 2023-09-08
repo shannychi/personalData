@@ -1,12 +1,12 @@
-let output = document.querySelector("div[data-testid='currentDayOfTheWeek']");
-let time = document.querySelector("div[data-testid='currentUTCTime']");
+let output = document.querySelector("p[data-testid='currentDayOfTheWeek']");
+let time = document.querySelector("p[data-testid='currentUTCTime']");
 
 let d = new Date();
 let day = d.getDay();
 function utctime() {
     const now = new Date();
     const utcmilliseconds = now.getTime();
-    document.querySelector("div[data-testid='currentUTCTime']").textContent = utcmilliseconds;
+    document.querySelector("p[data-testid='currentUTCTime']").textContent = utcmilliseconds;
 }
 switch (day) {
     case 0:
