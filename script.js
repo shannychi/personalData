@@ -3,7 +3,11 @@ let time = document.querySelector("div[data-testid='currentUTCTime']");
 
 let d = new Date();
 let day = d.getDay();
-let ntime = d.getUTCHours() + ":" + d.getUTCMinutes() + ":" + d.getUTCSeconds();
+function utctime() {
+    const now = new Date();
+    const utcmilliseconds = now.getTime();
+    document.querySelector("div[data-testid='currentUTCTime']").textContent = utcmilliseconds;
+}
 switch (day) {
     case 0:
         day = "Sunday";
@@ -27,5 +31,6 @@ switch (day) {
                                 day = "Saturday";
 }
 
+setInterval(utctime, 100);
 output.innerHTML = day;
-time.innerHTML = ntime;
+time.innerHTML = utctime();
